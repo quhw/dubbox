@@ -141,8 +141,7 @@
             under the License is distributed on an &quot;AS IS&quot;
             BASIS,&#10;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
             express or implied.&#10;See the License for the specific language
-            governing permissions and&#10;limitations under the License.
-        </copyright>
+            governing permissions and&#10;limitations under the License.</copyright>
         <profile.name>oss</profile.name>
 
         <!-- for maven compiler plugin -->
@@ -725,34 +724,4 @@
             <timezone>+8</timezone>
         </developer>
     </developers>
-
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <url>http://144.131.254.48/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://144.131.254.48/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <repositories>
-        <repository>
-            <id>main</id>
-            <url>http://144.131.254.48/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>main-plugin</id>
-            <url>http://144.131.254.48:6080/nexus/content/groups/public/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
