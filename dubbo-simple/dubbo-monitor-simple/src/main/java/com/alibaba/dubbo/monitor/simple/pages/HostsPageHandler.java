@@ -65,12 +65,13 @@ public class HostsPageHandler implements PageHandler {
                 int consumersSize = consumers == null ? 0 : consumers.size();
                 consumersCount += consumersSize;
                 row.add(consumersSize == 0 ? "<font color=\"blue\">No consumer</font>" : "<a href=\"consumers.html?host=" + host + "\">Consumers(" + consumersSize + ")</a>");
-                
+                row.add("<button onclick=\"if(confirm('Confirm shutdown provider?')){window.location.href='shutdown.html?host=" + host + "';}\">Shutdown</button>");
+
                 rows.add(row);
             }
         }
         return new Page("Hosts", "Hosts (" + rows.size() + ")",
-                new String[] { "Host Name/IP:", "Application", "Owner", "Providers(" + providersCount + ")", "Consumers(" + consumersCount + ")" }, rows);
+                new String[] { "Host Name/IP:", "Application", "Owner", "Providers(" + providersCount + ")", "Consumers(" + consumersCount + ")", "Shutdown" }, rows);
     }
 
 }
